@@ -32,7 +32,7 @@ public class Passenger {
     
     
     /**
-     * Acessor method for name
+     * Accessor method for name
      * @return name of the passenger
      */
     public String getName(){
