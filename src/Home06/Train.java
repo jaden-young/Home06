@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Home06;
-
 import java.util.ArrayList;
 
 /**
- *
+ * Creates Train objects that contain a list of Passengers on the train. 
+ * 
+ * <p>There is only one constructor, the default constructor, which initializes
+ * a new ArrayList of passenger type. Each Train object will have its own list.
+ * a mutator method is provided to add Passenger objects to the list. Accessor
+ * methods are provided to return the object at a specified index, the number 
+ * of passengers on the train, the number of passengers in first class, the 
+ * revenue generated (with parameters for the cost of first class and second 
+ * class tickets), and a search by name function is also provided, along with 
+ * toString and equals methods. 
  * @author jaden
  */
 public class Train {
@@ -29,8 +32,8 @@ public class Train {
     
     
     /**
-     * Adds a passenger object to the arraylist
-     * @param xPassenger new passenger object
+     * Adds a passenger object to the list of passengers
+     * @param xPassenger New passenger object
      */
     public void addPassenger(Passenger xPassenger){
         passengerList.add(xPassenger);
@@ -40,7 +43,7 @@ public class Train {
     
     /**
      * Returns the Passenger object at a specified index
-     * @param index Index of the desired passenger object in the arraylist
+     * @param index Index of the desired passenger object in the list
      * @return Reference to passenger object at the specified index
      */
     public Passenger getPassenger(int index){
@@ -63,6 +66,7 @@ public class Train {
      */
     public double getFirstClass(){
         int firstClass = 0;
+        
         for(Passenger currentPassenger : passengerList){
             if (currentPassenger.getClassOfService() == 1)
                 firstClass++;
@@ -78,7 +82,7 @@ public class Train {
      * @param xSecondClassCost Cost for each passenger in second class
      * @return Total revenue for the train 
      */
-    public double calculateCost(double xFirstClassCost, 
+    public double getRevenue(double xFirstClassCost, 
             double xSecondClassCost){
         int firstClass = 0;
         int secondClass = 0;
@@ -117,5 +121,57 @@ public class Train {
     
     
     
+    /**
+     * Returns a printable version of the names of ever passenger on the train
+     * @return A single string containing the names of each passenger
+     */
+    @Override
+    public String toString(){
+        String output = "";
+        int count = 0;
+       
+        for(Passenger currentPassenger : passengerList){
+            count++;
+            output += "Passenger " + count + ": " + currentPassenger.getName() +
+                    "\n";
+        }
+        return output;
+    }
     
+    
+    
+    /**
+     * Compares two Train objects for equality
+     * 
+     * <p> The number of passengers on the train, the name of each passenger, 
+     * and the class of service of each passenger are compared between the 
+     * objects. If there are any differences, return false
+     * @param xObj Object to be compared
+     * @return True if all fields are equal, false if there are any differences
+     */
+    @Override
+    public boolean equals(Object xObj){
+        if(!(xObj instanceof Train))
+            return false;
+        Train Obj = (Train)xObj;
+        
+        //if the lengths are different, objects are not equal
+        if (passengerList.size() != Obj.getNumberOfPassengers())
+            return false;
+        
+        
+        for (int i = 0; i < passengerList.size(); i++) {
+            //return false if any name is different between the 2 objects
+            if(!(passengerList.get(i).getName().equals(Obj.getPassenger(i)
+                    .getName())))
+                return false;
+            //return flase if any class of service is different between the 2
+            if(passengerList.get(i).getClassOfService() != 
+                    Obj.getPassenger(i).getClassOfService())
+                return false;
+        }
+        return true;
+    }
+    
+       
 }
