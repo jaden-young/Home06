@@ -91,6 +91,7 @@ public class Passenger {
     @Override
     public String toString(){
         String output = "";
+        
         output += "Passenger name: " + name;
         output += "\nClass of Service: " + classOfService;
         return output;
@@ -106,10 +107,11 @@ public class Passenger {
     public boolean equals(Object xObj){
         if(!(xObj instanceof Passenger))
             return false;
+        
         Passenger Obj = (Passenger)xObj;
+        
         if(!(name.equals(Obj.getName())))
             return false;
         return(classOfService == Obj.getClassOfService());
-            
     }
 }
