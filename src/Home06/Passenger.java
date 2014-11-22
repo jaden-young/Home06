@@ -4,11 +4,11 @@ package Home06;
  * 
  * <p>Contains 1 constructor that initializes a passenger object with values for 
  * name and class of service. Name can be any string, class of service must be 
- * either 1 or 2. The class provides accessor and mutator methods for each 
- * variable. The mutator method for the class of service checks the validity of 
- * the input. toString and equals methods that override those of the Object 
- * class are provided.
- * @author jaden
+ * either 1 or 2. The class provides accessor and mutator methods for both 
+ * name and class of service. The mutator method for the class of service checks
+ * the validity of the input. toString and equals methods that override those of
+ * the Object class are provided.
+ * @author Jaden Young
  */
 public class Passenger {
     
@@ -33,7 +33,7 @@ public class Passenger {
     
     /**
      * Accessor method for name
-     * @return name of the passenger
+     * @return Name of the passenger
      */
     public String getName(){
         return name;

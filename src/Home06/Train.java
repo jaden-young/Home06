@@ -4,20 +4,21 @@ import java.util.ArrayList;
 /**
  * Creates Train objects that contain a list of Passengers on the train. 
  * 
- * <p>There is only one constructor, the default constructor, which initializes
- * a new ArrayList of passenger type. Each Train object will have its own list.
- * a mutator method is provided to add Passenger objects to the list. Accessor
- * methods are provided to return the object at a specified index, the number 
- * of passengers on the train, the number of passengers in first class, the 
- * revenue generated (with parameters for the cost of first class and second 
- * class tickets), and a search by name function is also provided, along with 
- * toString and equals methods. 
- * @author jaden
+ * <p>Each Train object has one field: an array list of Passenger objects. 
+ * There is only one constructor, the default constructor, which initializes
+ * a new ArrayList of passenger type. Passengers are added to the list by using 
+ * the addPassenger method. Accessor methods are provided to return the 
+ * passenger object at a specified index, the number of passengers on the train,
+ * the number of passengers in first class, the revenue generated (with 
+ * parameters for the cost of first class and second class tickets), and a 
+ * search by name function is also provided, along with toString and equals 
+ * methods. 
+ * @author Jaden Young
  */
 public class Train {
     
     //instance variable
-    private ArrayList<Passenger> passengerList;
+    private final ArrayList<Passenger> passengerList;
     
     
     
@@ -27,7 +28,7 @@ public class Train {
      * Creates a Train object with an ArrayList of Passenger type
      */
     public Train(){
-        passengerList = new ArrayList<Passenger>();
+        passengerList = new ArrayList<>();
     }
     
     
