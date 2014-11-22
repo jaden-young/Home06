@@ -97,9 +97,8 @@ public class Train {
         }
         
         //calculate and return total revenue
-        double revenue = firstClass * xFirstClassCost 
+        return firstClass * xFirstClassCost 
                 + secondClass * xSecondClassCost;
-        return revenue;
     }
     
     

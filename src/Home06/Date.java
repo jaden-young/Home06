@@ -121,8 +121,8 @@ public class Date {
                             + "invalid, meaning my setMonth() method sucks.");
             }
         } else {
-            throw new IllegalArgumentException("You can't have a negative "
-                    + "day.");
+            throw new IllegalArgumentException("There's no such thing as a "
+                    + "negative day");
         }
     }
  
