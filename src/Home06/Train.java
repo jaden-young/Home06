@@ -48,7 +48,10 @@ public class Train {
      * @return Reference to passenger object at the specified index
      */
     public Passenger getPassenger(int index){
-        return passengerList.get(index);
+        if(index >= passengerList.size())
+            throw new ArrayIndexOutOfBoundsException();
+        else
+            return passengerList.get(index);
     }
     
     
