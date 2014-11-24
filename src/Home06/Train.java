@@ -65,11 +65,11 @@ public class Train {
     
     
     /**
-     * Returns the number of passengers in first class
+     * Returns the percentage of passengers in first class
      * @return Number of passengers in first class
      */
     public double getFirstClass(){
-        int firstClass = 0;
+        double firstClass = 0;
         
         for(Passenger currentPassenger : passengerList){
             if (currentPassenger.getClassOfService() == 1)
@@ -134,9 +134,9 @@ public class Train {
         int count = 0;
        
         for(Passenger currentPassenger : passengerList){
-            count++;
             output += "Passenger " + count + ": " + currentPassenger.getName() +
                     "\n";
+            count++;
         }
         return output;
     }
