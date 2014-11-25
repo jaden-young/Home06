@@ -4,7 +4,6 @@ import java.util.GregorianCalendar;
 
 /**
  * 
- * @author Jaden Young
  * 
  * This class defines a Date object. Each date has a day, month, and year. The
  * class contains public accessor methods for each field, as well as private 
@@ -18,6 +17,7 @@ import java.util.GregorianCalendar;
  * invalid date (i.e. 3/30/2014 > 2/30/2014). The class also contains equals()
  * and toString() methods that override those of the Object class.
  * 
+ * @author Jaden Young
  */
 public class Date {
     
@@ -172,4 +172,3 @@ public class Date {
         }
     }    
 }
-

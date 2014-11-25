@@ -1,6 +1,6 @@
 package Home06;
 /**
- * Creates objects of Passenger type with a name and a class of service.
+ * Defines Passenger objects that represent passengers on a train.
  * 
  * <p>Contains 1 constructor that initializes a passenger object with values for 
  * name and class of service. Name can be any string, class of service must be 
@@ -8,6 +8,7 @@ package Home06;
  * name and class of service. The mutator method for the class of service checks
  * the validity of the input. toString and equals methods that override those of
  * the Object class are provided.
+ * 
  * @author Jaden Young
  */
 public class Passenger {

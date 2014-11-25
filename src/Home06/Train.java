@@ -2,7 +2,7 @@ package Home06;
 import java.util.ArrayList;
 
 /**
- * Creates Train objects that contain a list of Passengers on the train. 
+ * Defines Train objects that contain a list of Passengers on the train. 
  * 
  * <p>Each Train object has one field: an array list of Passenger objects. 
  * There is only one constructor, the default constructor, which initializes
@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * parameters for the cost of first class and second class tickets), and a 
  * search by name function is also provided, along with toString and equals 
  * methods. 
+ * 
  * @author Jaden Young
  */
 public class Train {
